@@ -1,0 +1,22 @@
+version: '3'
+services:
+  google-cloud-sdk:
+    image: google/cloud-sdk:latest
+    container_name: gcp-pubsub
+    environment:
+      - PUBSUB_PROJECT_ID=app-payment-food
+      - PUBSUB_LISTEN_ADDRESS=0.0.0.0:8085
+    ports:
+      - "8085:8085"
+    networks:
+      - gcp
+    command: >
+      sh -c "
+        gcloud config set pass_credentials_to_gsutil false &&
+        gcloud beta emulators pubsub start --host-port=0.0.0.0:8085 &&
+        export PUBSUB_EMULATOR_HOST=0.0.0.0:8085 &&
+        sleep infinity"
+
+networks:
+  gcp:
+    driver: bridge

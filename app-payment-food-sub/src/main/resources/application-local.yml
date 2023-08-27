@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    gcp:
+      project-id: app-payment-food
+      pubsub:
+        emulator-host: localhost:8085
+        subscriber:
+          name: payment-food-pull
+          pull-endpoint: localhost:8085/v1/projects/app-payment-food/subscriptions/payment-food-pull

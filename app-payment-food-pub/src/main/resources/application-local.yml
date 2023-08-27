@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    gcp:
+      project-id: app-payment-food
+      pubsub:
+        emulator-host: localhost:8085
+        topic: payment-food
+        publisher:
+          endpoint: localhost:8085/v1/projects/app-payment-food/topics/payment-food
