@@ -22,7 +22,7 @@ Para modificar o tempo de retenção das mensagens em um tópico Pub/Sub, você 
 Lembre-se de projetar sua arquitetura considerando as necessidades reais do seu sistema e utilizando as ferramentas adequadas para cada cenário.
 ```
 
-### Caso queira, tem um arquivo 'docker-compose.yml' na raiz do projeto que cria um emulador do Pub/Sub localmente.
+### Caso opte por usar o emulador no Docker, tem um arquivo 'docker-compose.yml' na raiz do projeto que cria um emulador do Pub/Sub localmente.
 
 ### Opção gráfica para configurar projetos Pub/Sub, visualizar, enviar mensagens, etc.
 https://github.com/NeoScript/pubsub-emulator-ui
